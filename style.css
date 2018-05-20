@@ -3,7 +3,7 @@
 body {
     padding: 0;
     margin: 0;
-    font-family: Verdana, sans-serif;
+   font-family: 'Slabo 27px', serif;
     margin: 0;
 }
 
@@ -46,7 +46,7 @@ h2 {
     font-weight: 900;
     font-size: 16px;
     line-height: 1.54;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Raleway', sans-serif;
     letter-spacing: 0em;
     color: #4911ff;
 }
@@ -55,12 +55,18 @@ h3 {
     font-size: 48px;
     font-weight: 900;
     line-height: 1.25;
+    font-family: 'Raleway', sans-serif;
+}
+h4 {
+	font-family: 'Raleway', sans-serif;
 }
 
 .section2 h4:nth-child(-n+5){
   color: red;
 }
-
+p {
+	font-family: 'Merriweather', serif;
+}
 /* .section4_text_colm h4:nth-child(1) {
     color: #ffd015;
 }
@@ -87,8 +93,8 @@ h3 {
 
 .mySlides {
     position: relative;
-    transition-duration: 5s;
-        transition: background-color 0.6s ease-in;
+   transition-duration: 5s ease-in;
+    transition: background-color 6s ease-in;
 }
 
 .mySlides img {
@@ -96,8 +102,33 @@ h3 {
     height: auto;
 }
 
-
-
+.text-block {
+	width: 350px;
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px;
+    opacity: 0;
+    transition-duration: 4s ease-in;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    
+}
+@keyframes text {
+	0%{
+		 opacity: 0;
+	}
+	50%{
+		 opacity: 1;
+	}
+	100%{
+		 opacity: 1;
+	}
+}
 
 .dot-container {
     text-align: left;
@@ -133,14 +164,13 @@ h3 {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidenav a {
@@ -154,14 +184,27 @@ h3 {
 
 .sidenav a:hover {
     color: #f1f1f1;
+    border-bottom: 1px solid #ff3cbc;
 }
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: -50px;
     font-size: 36px;
     margin-left: 50px;
+}
+.sp {
+	font-size: 15px;
+	cursor:pointer;
+	position: absolute;
+	z-index: 1;
+	color: #ff3cbc;
+/* 	margin-left: 60px; */
+	right: 50px;
+	padding: 10px;
+	margin: 50px;
+	border: 2px solid #ff3cbc;
 }
 
 
@@ -180,7 +223,7 @@ h3 {
 }
 
 .colm {
-    width: 280px;
+    width: 220px;
     position: relative;
     margin: 20px;
 }
@@ -293,6 +336,14 @@ h3 {
 .fa-microchip,
 .fa-asterisk {
     margin: 15px 0;
+    /* transform: rotate(360deg); */
+    transition: all 0.5s ease-in-out;
+}
+.colm:hover .fa-desktop,
+.colm:hover .fa-cog,
+.colm:hover .fa-microchip,
+.colm:hover .fa-asterisk {
+   transform: rotate(360deg);
 }
 
 
@@ -365,11 +416,82 @@ h3 {
     position: relative;
 }
 
+/* ============================== madal ============================== */
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
 
 
 /* ============================== Tickets ============================== */
 
-.title {}
+
 
 .tickets_prices {
     padding: 10px 0;
@@ -491,7 +613,7 @@ h3 {
 }
 
 .section_text {
-    padding: 50px 150px;
+   padding: 50px 150px;
     text-align: center;
 }
 
@@ -509,13 +631,13 @@ h3 {
 }
 
 .form {
-    padding: 10px
+    padding: 10px;
 }
 
 .form label {
     display: inline-block;
     width: 49%;
-    /* margin: 10px 0; */
+    margin: 10px 0;
 }
 
 
@@ -529,6 +651,13 @@ input {
     transition: .3s;
     border-radius: 6px;
     outline: none;
+}
+input:required:valid {
+  border-color: green;
+}
+
+input:required:invalid {
+  border-color: red;
 }
 
 select {
@@ -548,7 +677,7 @@ select {
 textarea {
     display: block;
     padding: 10px 20px;
-    margin: 10px 0;
+    margin: 10px  0;
     border: 1px solid #f8f8f8;
     background-color: #f8f8f8;
     font-size: 14px;
@@ -589,7 +718,7 @@ textarea {
 /* ============================== media ============================== */
 
 @media screen and (max-width: 768px) {
-    .section4 {
+    .Years {
         background-image: none;
     }
     .text {
@@ -602,21 +731,38 @@ textarea {
     .wrap {
         padding: 0 10px;
     }
-    .section9_wrap {
+    .contact_wrap {
         flex-wrap: wrap;
     }
     .section_text {
         padding: 10px;
         text-align: center;
     }
-    .section9_text,
-    .section9_form {
+    .contact_text,
+    .contact_form {
         width: auto;
         text-align: center;
         padding: 20px 10px;
+        margin: 0 auto;
     }
     .form label {
         display: block;
         width: 49%;
     }
+    .text-block {
+	display: none;
+	}
+	.sp {
+	font-size: 15px;
+	cursor:pointer;
+	position: absolute;
+	z-index: 1;
+	color: #ff3cbc;
+/* 	margin-left: 60px; */
+	right: 0px;
+	padding: 10px;
+	margin: 10px;
+	border: 2px solid #ff3cbc;
+}
+
 }
