@@ -7,9 +7,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
     <title>Document</title>
 </head>
 
@@ -23,28 +20,16 @@
             <a href="#Teams">Teams</a>
             <a href="#Contact">Contact</a>
         </div>
-        <div class="sp" onclick="openNav()">&#9776;</div>
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; MENU</span>
         <div class="slideshow-container">
             <div class="mySlides">
                 <img src="img/slide_1.jpg">
-                <div class="text-block">
-                    <h4><strong>This Year's Judges...</strong></h4>
-                    <p>Considering that the number of coders-participants of this year’s Codathon set a pretty high record-breaking bar, the number of judges does the same!</p>
-                </div>
             </div>
             <div class="mySlides">
                 <img src="img/slide_2.jpg">
-                <div class="text-block">
-                    <h4><strong>Annual Hackathon for Devs...</strong></h4>
-                    <p>For the last 20 years the Codathon hackathon’s been the main staple for coders from across the niches and different parts of the US. This year, with more than 2500 tickets sold out already, it looks to be the biggest one!</p>
-                </div>
             </div>
             <div class="mySlides">
                 <img src="img/slide_3.jpg">
-                <div class="text-block">
-                    <h4><strong>Promo for Pre-booking 2018!</strong></h4>
-                    <p>Being an annual event and having already sold out all of this year’s tickets, we are indeed planning to start selling tickets for Codathon ’18.</p>
-                </div>
             </div>
             <div class="dot-container">
                 <span class="dot" onclick="currentSlide(1)"></span>
@@ -135,8 +120,7 @@
     </section>
     <section class="Foto">
         <div class="foto_colmn">
-            <div class="foto_img">
-            	<img id="myImg" src="img/page1_img_1.jpg">
+            <div class="foto_img"><img src="img/page1_img_1.jpg">
                 <div class="overlay"><i class="fas fa-search"></i></div>
             </div>
             <div class="foto_img"><img src="img/page1_img_2.jpg">
@@ -252,11 +236,13 @@
                 </div>
             </div>
     </section>
-    <section>
-        <div class="section_text">
+
+   
+        <section class="section_text">
             <H3>Still Have Some Questions Left? Call us for a<span><strong> Free Consultation at 855-456-7634</strong></span></H3>
-        </div>
-    </section>
+        </section>
+    
+
     <section class="Contact"><a name="Contact"></a>
         <div class="contact_wrap">
             <div class="contact_text">
@@ -264,35 +250,27 @@
                 <p>With thousands of participants and attendees at every hackathon we do our inbox is always full of inquiries ad all other sorts of messages…</p>
             </div>
             <div class="contact_form">
-                <div class="contact_wrap">
-                    <div class="input_colm">
-                        <div class="form">
-                            <label>Subject
-                               <!--  <select>
-                                   <option>Kyiv</option>
-                                   <option>Las Vegas</option>
-                                   <option>London</option>
-                                   <option>Milan</option>
-                               </select> -->
-                               <input type="name" placeholder="Serhii">
-                            </label>
-                            <label>Name
-                                <input required type="name" placeholder="John">
-                            </label>
-                        </div>
-                        <div class="form">
-                            <label>E-mail
-                                <input required type="email" placeholder="admin@hac.com">
-                            </label>
-                            <label>Phone
-                                <input type="phone" placeholder="+38077777777">
-                            </label>
-                        </div>
-                        <div class="form">
-                            <label>Questions and Comments</label>
-                            <textarea required type="text" placeholder="Comments"></textarea>
-                            <button>Get Us Quoete</button>
-                        </div>
+                <div class="input_colm">
+                    <div class="form">
+                        <label>Name
+                            <input type="name" placeholder="Serhii">
+                        </label>
+                        <label>Surname
+                            <input type="name" placeholder="Serhii">
+                        </label>
+                    </div>
+                    <div class="form">
+                        <label>E-mail
+                            <input type="email" placeholder="admin@hac.com">
+                        </label>
+                        <label>Phone
+                            <input type="phone" placeholder="+38077777777">
+                        </label>
+                    </div>
+                    <div class="form">
+                        <label>Questions and Comments</label>
+                        <textarea type="text" placeholder="Comments"></textarea>
+                        <button>Get Us Quoete</button>
                     </div>
                 </div>
             </div>
