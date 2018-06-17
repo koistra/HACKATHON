@@ -57,26 +57,6 @@ h3 {
     line-height: 1.25;
 }
 
-.section2 h4:nth-child(-n+5){
-  color: red;
-}
-
-/* .section4_text_colm h4:nth-child(1) {
-    color: #ffd015;
-}
-
-.section4_text_colm h4:nth-child(2) {
-    color: red;
-    font-size: 30px;
-}
-
-.section4_text_colm h4:nth-child(3) {
-    color: green;
-    font-size: 30px;
-}
- */
-
-
 /* ============================== slider ============================== */
 
 .slideshow-container {
@@ -88,7 +68,7 @@ h3 {
 .mySlides {
     position: relative;
     transition-duration: 5s;
-        transition: background-color 0.6s ease-in;
+    transition: background-color 0.6s ease-in;
 }
 
 .mySlides img {
@@ -96,7 +76,33 @@ h3 {
     height: auto;
 }
 
+.text-block {
+    width: 350px;
+    position: absolute;
+    bottom: 40%;
+    left: 10%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 40px;
+    opacity: 0;
+    transition-duration: 4s ease-in;
+    animation-name: text;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+}
 
+@keyframes text {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 
 .dot-container {
@@ -122,25 +128,19 @@ h3 {
     background-color: #ff3cbc;
 }
 
-
-
-
-
-
 /* ============================== menu ============================== */
 
 .sidenav {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
-    z-index: 1;
+    z-index: 2;
 }
 
 .sidenav a {
@@ -154,16 +154,29 @@ h3 {
 
 .sidenav a:hover {
     color: #f1f1f1;
+    border-bottom: 1px solid #ff3cbc;
 }
 
 .sidenav .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    left: -50px;
     font-size: 36px;
     margin-left: 50px;
 }
 
+.sp {
+    font-size: 15px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    color: #ff3cbc;
+    /*  margin-left: 60px; */
+    right: 50px;
+    padding: 10px;
+    margin: 50px;
+    border: 2px solid #ff3cbc;
+}
 
 /* ============================== Participants ============================== */
 
@@ -180,11 +193,10 @@ h3 {
 }
 
 .colm {
-    width: 280px;
+    width: 220px;
     position: relative;
     margin: 20px;
 }
-
 
 
 
@@ -202,8 +214,6 @@ h3 {
 .container {
     padding: 50px 0px;
 }
-
-
 
 /* ============================== Years ============================== */
 
@@ -239,39 +249,20 @@ h3 {
     text-align: center;
 }
 
-
-
-/* h4 {
-    color: red;
-} */
-
-.years_text_colm h4:nth-child(1) {
+.years_text_colm:nth-child(1) h4 {
     color: #4911ff;
+    font-size: 48px;
 }
 
-.years_text_colm h4:nth-of-type(2) {
+.years_text_colm:nth-child(2) h4 {
     color: #00edf0;
+    font-size: 48px;
 }
 
-.years_text_colm h4:nth-of-type(3) {
+.years_text_colm:last-of-type h4 {
     color: #ffd015;
+    font-size: 48px;
 }
-
-
-
-
-/* 
-.section4_text_colm  h4:nth-child(1){
-    color: #4911ff;
-}
-.section4_text_colm  h4:nth-child(1){
-    color: #00edf0;
-}
-.section4_text_colm  h4:nth-child(1){
-    color: #ffd015;
-}
- */
-
 
 /* ============================== Disciplines ============================== */
 
@@ -307,14 +298,13 @@ h3 {
     box-sizing: border-box;
     background-color: #fff;
 }
+
 .colm:hover .fa-desktop,
 .colm:hover .fa-cog,
 .colm:hover .fa-microchip,
 .colm:hover .fa-asterisk {
-   transform: rotate(360deg);
+    transform: rotate(360deg);
 }
-
-
 
 /* ============================== Foto ============================== */
 
@@ -336,7 +326,6 @@ h3 {
 .foto_img:hover .overlay {
     opacity: 1;
 }
-
 
 .overlay {
     display: block;
@@ -363,7 +352,6 @@ h3 {
     text-align: center;
 }
 
-
 .foto_img img {
     width: 100%;
     height: auto;
@@ -371,11 +359,21 @@ h3 {
     position: relative;
 }
 
-
-
 /* ============================== Tickets ============================== */
 
-.title {}
+.colm h2 {
+    color: #4911ff;
+    font-size: 48px;
+}
+
+.colm:nth-child(3) h2 {
+    color: #ffd015;
+}
+
+.colm h4 {
+    font-size: 30px;
+    line-height: 20px;
+}
 
 .tickets_prices {
     padding: 10px 0;
@@ -434,8 +432,6 @@ h3 {
     color: #fff;
 }
 
-
-
 /* ============================== Teams ============================== */
 
 .Teams {
@@ -469,7 +465,10 @@ h3 {
     color: #000;
 }
 
-.colm_text {}
+.colm_text h4 {
+    font-size: 36px;
+    padding: 0;
+}
 
 .colm_team_img {
     overflow: hidden;
@@ -480,13 +479,16 @@ h3 {
     width: 100%;
     height: auto;
 }
+
 /* ============================== section_text ============================== */
 
 .section_text {
     padding: 50px 150px;
     text-align: center;
 }
+
 /* ============================== Contact ============================== */
+
 .Contact {
     background-image: url(img/bg_pic_6.jpg);
     background-position: center;
@@ -495,6 +497,7 @@ h3 {
     background-size: cover;
     color: #fff;
 }
+
 .contact_wrap {
     display: flex;
     flex-wrap: wrap;
@@ -558,16 +561,14 @@ textarea {
     cursor: pointer;
 }
 
-
 /* ============================== footer ============================== */
 
 .footer {
     display: flex;
     justify-content: center;
     background-color: #ccc;
+    color: #000;
 }
-
-
 
 /* ============================== media ============================== */
 
@@ -612,6 +613,9 @@ textarea {
         padding: 10px;
         text-align: center;
     }
+    .Years {
+        background-image: none;
+    }
     .section9_text,
     .section9_form {
         width: auto;
@@ -624,9 +628,26 @@ textarea {
         flex-wrap: wrap;
         flex-direction: column;
         width: auto;
+        padding: 10px 0px;
     }
     .contact_text {
         text-align: center;
+    }
+
+    .text-block {
+        display: none;
+    }
+    .sp {
+        font-size: 15px;
+        cursor: pointer;
+        position: absolute;
+        z-index: 1;
+        color: #ff3cbc;
+        /*  margin-left: 60px; */
+        right: 0px;
+        padding: 10px;
+        margin: 10px;
+        border: 2px solid #ff3cbc;
     }
     .form {
         text-align: center;
@@ -635,6 +656,4 @@ textarea {
         margin: 0 auto;
         width: auto;
     }
-
-
 }
